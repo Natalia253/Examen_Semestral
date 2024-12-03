@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sitio Turístico 5</title>
+    <link rel="stylesheet" href="sitio5css.css">
+    
+
+
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <form action="#" method="get" class="search-bar">
+                <input type="text" name="search" placeholder="Buscar..." aria-label="Buscar" class="search-input">
+                <button type="submit" class="search-button">Buscar</button>
+            </form>
+            <ul>
+                <li><a href=" ">Inicio</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Sitios Turísticos</a>
+                    <div class="dropdown-content">
+                        <a href="Sitio1.html">El Salado</a>
+                        <a href="sitio2.html">El nispero</a>
+                        <a href="Sitio3.html">Playa Santa clara</a>
+                        <a href="sitio4.html">Los Chorros de Olá</a>
+                        <a href="sitio5.html">Cascada El Águila – Valle de Antón</a>
+                    </div>
+                </li>
+                <li><a href="Galeria.html">Galería</a></li>
+                <li><a href="juego.html">Juego</a></li>
+                <li><a href="Contactos.html">Contacto</a></li>
+            </ul>
+        </nav>
+    <div class="slider">
+        <figure>
+            <div class="slide">
+                <img src="https://th.bing.com/th/id/OIP.QY87kPUu0ZSFhEU7O7k4ZAAAAA?rs=1&pid=ImgDetMain" alt="Imagen 1">
+            </div>
+            <div class="slide">
+                <img src="https://cdn.civitatis.com/panama/ciudad-de-panama/galeria/cascada-el-macho.jpg" alt="Imagen 2">
+            </div>
+            <div class="slide">
+                <img src="https://static.tvn-2.com/clip/6e1e3323-9f61-46cf-a57c-c7a859752b88_1-1-aspect-ratio_850w_0.webp" alt="Imagen 3">
+            </div>
+            <div class="slide">
+                <img src="https://i.ytimg.com/vi/876kisp7kuc/maxresdefault.jpg" alt="">
+            </div>
+        </figure>
+    </div>
+    
+    <!-- Título fuera del slider, se queda fijo en la parte superior -->
+    <div class="slider-title">
+        <center>        <h1>Cascada El Águila – Valle de Antón</h1>
+        </center>
+    </div>
+    <main id="main">
+        <section class="split-section">
+            <div class="split-text">
+                <h2></h2>
+                <p >Está ubicada en el Valle de Antón, corregimiento de El Nancito. Para ese recorrido, es recomendable hacerse acompañar de un guía, porque los caminos pueden tornarse confusos y una persona que no sepa podría perderse. El trayecto demora entre una hora y una hora con 45 minutos.</p>
+            </div>
+            <div class="split-image">
+                <img src="https://cdn.tiqy.com/img/t/nativa-tours-meet-anton-valley-in-one-day-panama-184.jpg?width=850&height=460&fixedwidthheight=true" alt="Paisaje Natural">
+            </div>
+        </section>
+        <section class="carousel">
+            <h2>Lugares Destacados</h2>
+            <div class="carousel-container">
+                <div class="carousel-item">
+                    <img src="https://static.tvn-2.com/clip/6e1e3323-9f61-46cf-a57c-c7a859752b88_1-1-aspect-ratio_850w_0.webp" alt="Playa">
+                    <p>Fauna y Flora</p>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://elvenezolano.com.pa/wp-content/uploads/2017/05/13-El-Valle-2-768x512.jpg" alt="Montaña">
+                    <p>Montañas Imponentes</p>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://th.bing.com/th/id/OIP.UAQNJy4rRJWSBp1FVFsUkQHaFj?rs=1&pid=ImgDetMain" alt="Cultura">
+                    <p>Cultura Viva</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footerContainer">
+            <div class="socialIcons">
+                <a href=""><i class="fa-brands fa-facebook"></i></a>
+                <a href=""><i class="fa-brands fa-instagram"></i></a>
+                <a href=""><i class="fa-brands fa-twitter"></i></a>
+                <a href=""><i class="fa-brands fa-google-plus"></i></a>
+                <a href=""><i class="fa-brands fa-youtube"></i></a>
+            </div>
+            <div class="footerNav">
+                <ul><li><a href="">Inicio</a></li>
+                    <li><a href="">Sitios Turisticos</a></li>
+                    <li><a href="Galeria.html">Galería</a></li>
+                    <li><a href="">Juego</a></li>
+                    <li><a href="Contactos.html">Contacto</a></li>
+                </ul>
+            </div>
+            
+        </div>
+        <div class="footerBottom">
+            <p>Copyright &copy;2023; Designed by <span class="designer">Natalia Bernal, Daniel Carrasco, Rodolfo Cortez</span></p>
+        </div>
+    </footer>
+
+    
+    <script>
+        let currentIndex = 0;
+        const slides = document.querySelector('.slides');
+        const totalSlides = document.querySelectorAll('.slide').length;
+    
+        setInterval(() => {
+            currentIndex = (currentIndex + 1) % totalSlides;
+            slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+        }, 5000); // Cambia cada 5 segundos
+    </script>
+</body>
+</html>
